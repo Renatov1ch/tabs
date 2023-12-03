@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+.tabs input {
+    display: none;
+}
+.tabs label{
+    padding: 10px 20px;
+    display: inline-block;
+    color: green;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid green;
+    transition: 0.3s;
+}
+.tabs label:hover {
+    background: rgba(0, 128, 0, 0.413);
+    color: white;
+} 
+
+
+#kyrgyzstan:checked ~ .tab1 {
+    background: green;
+    color: white;
+}
+#kazahstan:checked ~ .tab2 {
+    background: green;
+    color: white;
+}
+#russian:checked ~ .tab3 {
+    background: green;
+    color: white;
+}
+#italy:checked ~ .tab4 {
+    background: green;
+    color: white;
+}
+
+#kyrgyzstan:checked~ .kz-content,
+#kyrgyzstan:checked~ .ru-content,
+#kyrgyzstan:checked~ .ity-content {
+    display: none;
+}
+
+#kazahstan:checked~ .kg-content,
+#kazahstan:checked~ .ru-content,
+#kazahstan:checked~ .ity-content {
+    display: none;
+}
+
+#russian:checked~ .kz-content,
+#russian:checked~ .kg-content,
+#russian:checked~ .ity-content {
+    display: none;
+}
+
+#italy:checked~ .kz-content,
+#italy:checked~ .ru-content,
+#italy:checked~ .kg-content {
+    display: none;
+}
+
